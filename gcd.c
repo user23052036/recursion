@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int MIN(int,int);
-GCD_num(int,int);
+int GCD_num(int,int);
 int main()
 {
     int num1,num2;
