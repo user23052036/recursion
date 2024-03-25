@@ -1,25 +1,25 @@
 #include<stdio.h>
 
 int MIN(int,int);
-int GCD_num(int,int);
+int LCM_num(int,int);
 int main()
 {
-    int num1,num2,gcd;
-    printf("Enter your two number to find GCD:--->");
+    int num1,num2,lcm;
+    printf("Enter your two number to find LCM:--->");
     scanf("%d%d",&num1,&num2);
     
-    gcd = GCD_num(num1,num2);
+    lcm = LCM_num(num1,num2);
     
-    if(gcd == -1)
+    if(lcm == -1)
         printf("INVALID INPUT");
     else
-        printf("GCD IS :---> %d",gcd);
+        printf("LCM IS :---> %d",lcm);
     return 0;
 }
 
-int GCD_num(int num1, int num2)
+int LCM_num(int num1, int num2)
 {
-    int i,min,GCD;
+    int i,min,LCM;
     min = MIN(num1,num2); 
 
     if(num1 ==1 || num2 ==1)
@@ -34,13 +34,13 @@ int GCD_num(int num1, int num2)
     for(i=2; i<=min; i++)
         if(num1%i==0 && num2%i==0)
         {
-            GCD = GCD_num(num1/i,num2/i);     //sub_answer
+            LCM = LCM_num(num1/i,num2/i);     //sub_answer
             break;
         }
     
     if(i>min)                                 //base case
         return 1;
-    return (GCD*i);                          //original_answer
+    return (LCM*i);                          //original_answer
 }
 
 int MIN(int num1, int num2)
