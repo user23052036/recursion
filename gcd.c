@@ -1,3 +1,6 @@
+// lcm(a,b)*hcf(a,b) = |a.b|
+//this can be used to find the lcm and hcf
+
 #include<stdio.h>
 
 int MIN(int,int);
