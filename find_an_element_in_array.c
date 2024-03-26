@@ -27,10 +27,10 @@ int main()
 
 int find_element(int *arr, int index, int num)
 {
-    if(index==-1) 
-        return(-1);
-
-    else if(arr[index] == num) 
+    if(index==-1)
+        return -1;
+    else if(arr[index]==num)
         return(index);
-    else find_element(arr,index-1,num);
+    else 
+        find_element(arr,index-1,num);
 }
