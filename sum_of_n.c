@@ -14,11 +14,7 @@ int main()
 
 int num_sum(int num)
 {
-    if(num == 1)                // base condition 1
+    if(num==1)
         return 1;
-    if(num == 0)                // base condition 2
-        return 0;
-    
-    int sum = num_sum(num-1);  // sub problems
-    return (sum+num);          // main problem
+    return(num + num_sum(num-1));
 }
