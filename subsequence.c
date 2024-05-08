@@ -26,7 +26,7 @@ int main()
 
 void subsequence_print(int index, int *arr, int size)
 {
-    if(index>=size)
+    if(index>size)
     {
         printf("{");
         display();
