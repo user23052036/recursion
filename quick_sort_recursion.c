@@ -49,9 +49,10 @@ int correct_pos(int *arr, int choice, int low, int high)
     return(j);
 }
 
-void switch_num(int *p, int *q)
+void switch_num(int *p, int *q) // i dont know why but this function is wrong
 {
     *p = *p + *q;
     *q = *p - *q;
     *p = *p - *q;
 }
+

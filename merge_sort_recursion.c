@@ -67,7 +67,7 @@ void merge(int *arr, int low, int mid, int high)
     }
 
     for(int i=low; i<=high; i++)
-        arr[low] = temp[i-low];
+        arr[i] = temp[i-low];
     free(temp);
 }
 
